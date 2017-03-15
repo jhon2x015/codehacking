@@ -6,6 +6,15 @@
 
 @section('content')
 
+
+	
+	@if(Session::has('delete_users'))
+
+		<p class="bg-danger">{{session('delete_users')}}</p>
+
+
+	@endif
+
 	<h1>Users</h1>
 
 	<table class="table">
@@ -39,6 +48,7 @@
 			      	</tr>
 
 	      		@endforeach
+	      		
 	      	@endif
 
 	    </tbody>
